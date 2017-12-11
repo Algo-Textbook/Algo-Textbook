@@ -1,0 +1,169 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Collapsible sidebar using Bootstrap 3</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style2.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>알고리즘단원교재</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <p>2.2 알고리즘</p>
+        <li class="active">
+          <a href="#">홈으로 돌아가기</a>
+
+        </li>
+        <li>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">1 알고리즘 이해하기</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li><a href="./understand_home.html">알고리즘의 정의</a></li>
+            <li><a href="#">알고리즘의 중요성</a></li>
+            <li><a href="#">실생활 속 알고리즘</a></li>
+            <li><a href="#">문제풀이</a></li>
+          </ul>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">2 알고리즘 표현하기</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li><a href="./e1_tools.html">알고리즘 표현방법</a></li>
+            <li><a href="./e2_structure.html">알고리즘 표현방식</a></li>
+            <li><a href="./e3_practice.html">문제풀이</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">모둠활동</a>
+        </li>
+        <li>
+          <a href="#">질문게시판</a>
+        </li>
+      </ul>
+
+      <!-- 원작자의 다운로드 버튼
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
+                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+                </ul>
+              -->
+    </nav>
+
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+          <div class="navbar-header">
+            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Toggle Sidebar</span>
+                            </button>
+            <h3>알고리즘</h3>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/express_home.html">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- textbook contents write down here-->
+      <div id="content-box" class="col-sm-offset-2 col-sm-8">
+        <div class="row">
+          <!-- textconents use id="text-box" title should be <h3></h3> -->
+          <div id="text-box">
+            <h3> 문제풀이 </h3>
+            <p> </p>
+          </div>
+
+          <div id="text-box">
+            <h3> 복습하기 </h3>
+            <p> 문제에 대한 답이 바로 생각나지 않나요? 지금까지 배운 내용을 동영상을 통해 잠깐 복습해볼까요? </p>
+          </div>
+
+          <div id="text-box">
+            <h4> 1. 무엇으로 알고리즘을 표현할 수 있을까? </h4>
+          </div>
+          <div class="youtubeWrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qa7FytH4Zbc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div id="text-box">
+            <h3> </h3>
+            <h4> 2. 어떤 구조로 알고리즘을 표현할 수 있을까? </h4>
+            <h6> * 해당 동영상 후반부에는 우리가 아직 안 배운 '스크래치' 내용도 있어요! *</h6>
+          </div>
+          <div class="youtubeWrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/D1GjtTR9Ch8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+
+          <div id="text-box">
+            <ul class="pager">
+                    <li class="previous"><a href="./e2_structure.html">&larr; 이전 페이지</a></li>
+                    <li class="next disabled"><a href="#">다음 페이지 &rarr;</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- textbook contents write up here-->
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- Bootstrap Js CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function() {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
